@@ -41,6 +41,8 @@ final class SlidingPaginationSubscriber implements EventSubscriberInterface
         // default sort field and order
         $eventOptions = $event->options;
 
+        $options = array_merge($this->options, $event->options);
+
         if (isset($eventOptions['defaultSortFieldName']) && !isset($this->params[$eventOptions['sortFieldParameterName']])) {
             $this->params[$eventOptions['sortFieldParameterName']] = $eventOptions['defaultSortFieldName'];
         }
@@ -55,7 +57,7 @@ final class SlidingPaginationSubscriber implements EventSubscriberInterface
         $pagination->setTemplate($this->options['defaultPaginationTemplate']);
         $pagination->setSortableTemplate($this->options['defaultSortableTemplate']);
         $pagination->setFiltrationTemplate($this->options['defaultFiltrationTemplate']);
-        $pagination->setPageRange($this->options['defaultPageRange']);
+        $pagination->setPageRange($options['defaultPageRange']);
 
         $event->setPagination($pagination);
         $event->stopPropagation();
