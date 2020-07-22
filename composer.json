@@ -1,7 +1,7 @@
 {
     "name": "metaship-ru/knp-paginator-bundle",
     "type": "symfony-bundle",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "Paginator bundle for Symfony to automate pagination and simplify sorting and other features",
     "keywords": ["pager", "paginator", "pagination", "symfony", "bundle", "knp", "knplabs"],
     "homepage": "http://github.com/KnpLabs/KnpPaginatorBundle",
@@ -18,7 +18,7 @@
     ],
     "require": {
         "php":                      "^7.1",
-        "knplabs/knp-components":   "^1.3 || 2.3.4",
+        "knplabs/knp-components":   "^1.3 || 2.3.4.*",
         "symfony/framework-bundle": "^3.4 || ^4.0",
         "symfony/translation":      "^3.4 || ^4.0",
         "twig/twig":                "^2.0"
